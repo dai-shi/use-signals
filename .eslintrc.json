@@ -1,0 +1,64 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "JSX": "readonly"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".tsx"] }],
+    "react/prop-types": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "import/extensions": ["error", "never"],
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": ["error", { "ignore": ["use-signals"] }],
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-bitwise": "off",
+    "symbol-description": "off",
+    "prefer-object-spread": "off",
+    "no-use-before-define": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "varsIgnorePattern": "^(createElement|Fragment)$"
+    }],
+    "no-redeclare": "off",
+    "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
+  },
+  "overrides": [{
+    "files": ["__tests__/**/*"],
+    "env": {
+      "jest": true
+    },
+    "rules": {
+      "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    }
+  }, {
+    "files": ["examples/**/*"],
+    "rules": {
+      "import/no-extraneous-dependencies": "off"
+    }
+  }]
+}
