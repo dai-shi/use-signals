@@ -5,7 +5,7 @@
 [![size](https://img.shields.io/bundlephobia/minzip/use-signals)](https://bundlephobia.com/result?p=use-signals)
 [![discord](https://img.shields.io/discord/627656437971288081)](https://discord.gg/MrQdmzd)
 
-An experimental React hook for TC39 signals
+An experimental React hook for [TC39 signals](https://github.com/proposal-signals/proposal-signals)
 
 ## Install
 
