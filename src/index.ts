@@ -1,5 +1,7 @@
-import { useCallback, useSyncExternalStore } from 'react';
+import ReactExports from 'react';
 import { Signal } from 'signal-polyfill';
+
+const { useCallback, useSyncExternalStore } = ReactExports;
 
 export { Signal };
 
