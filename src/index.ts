@@ -1,7 +1,5 @@
-import ReactExports from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 import { Signal } from 'signal-polyfill';
-
-const { useCallback, useSyncExternalStore } = ReactExports;
 
 export { Signal };
 
@@ -28,5 +26,5 @@ export function useSignal<T>(signal: AnySignal<T>): T {
     [signal],
   );
   const getSnapshot = () => signal.get();
-  return useSyncExternalStore(subscribe, getSnapshot);
+  return useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
 }
