@@ -38,6 +38,7 @@
     "test:format": "prettier -c .",
     "test:lint": "eslint .",
     "test:types": "tsc -p . --noEmit",
+    "test:types:examples": "tsc -p examples --noEmit",
     "test:spec": "vitest run",
     "examples:01_counter": "DIR=01_counter vite"
   },

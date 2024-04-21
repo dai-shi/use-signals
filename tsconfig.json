@@ -4,8 +4,7 @@
     "target": "es2018",
     "downlevelIteration": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "nodenext",
     "allowJs": true,
     "verbatimModuleSyntax": true,
     "noUncheckedIndexedAccess": true,
@@ -15,5 +14,6 @@
     "paths": {
       "use-signals": ["./src"]
     }
-  }
+  },
+  "exclude": ["dist", "examples"]
 }

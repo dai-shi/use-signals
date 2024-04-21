@@ -1,7 +1,8 @@
 {
-  "name": "use-signals-example",
-  "version": "0.1.0",
+  "name": "example",
+  "version": "0.0.0",
   "private": true,
+  "type": "commonjs",
   "dependencies": {
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -16,11 +17,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  }
 }
