@@ -32,7 +32,7 @@
   "packageManager": "pnpm@8.15.0",
   "scripts": {
     "compile": "rm -rf dist && pnpm run '/^compile:.*/'",
-    "compile:esm": "tsc -p .",
+    "compile:esm": "tsc -p tsconfig.esm.json",
     "compile:cjs": "tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
     "test": "pnpm run '/^test:.*/'",
     "test:format": "prettier -c .",
