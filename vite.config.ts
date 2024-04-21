@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => {
   if (mode === 'test') {
     return {
       resolve: { alias: { 'use-signals': resolve('src') } },
+      test: { environment: 'jsdom' },
     };
   }
   if (!DIR) {
