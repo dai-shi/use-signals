@@ -22,7 +22,6 @@ module.exports = {
     react: { version: 'detect' },
   },
   rules: {
-    'import/extensions': ['error', 'never'],
     'import/no-unresolved': ['error', { ignore: ['use-signals'] }],
   },
 };
