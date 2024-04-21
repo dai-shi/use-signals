@@ -1,8 +1,10 @@
-import { test } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { afterEach, expect, test } from 'vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 
 import { Signal, useSignal } from 'use-signals';
+
+afterEach(cleanup);
 
 test('counter app', async () => {
   const user = userEvent.setup();
@@ -12,7 +14,7 @@ test('counter app', async () => {
     const inc = () => counter.set(counter.get() + 1);
     return (
       <>
-        <div>Count: {count}</div>
+        <div data-testid="count">{count}</div>
         <button type="button" onClick={inc}>
           +1
         </button>
@@ -20,9 +22,9 @@ test('counter app', async () => {
     );
   };
   render(<App />);
-  await screen.findByText('Count: 0');
+  expect(screen.getByTestId('count')).toHaveTextContent('0');
   await user.click(screen.getByRole('button'));
-  await screen.findByText('Count: 1');
+  expect(screen.getByTestId('count')).toHaveTextContent('1');
   await user.click(screen.getByRole('button'));
-  await screen.findByText('Count: 2');
+  expect(screen.getByTestId('count')).toHaveTextContent('2');
 });
