@@ -1,27 +1,33 @@
+/// <reference types="vitest" />
+
 import { resolve } from 'node:path';
 import { readFileSync } from 'node:fs';
 import { defineConfig } from 'vite';
 import type { Plugin } from 'vite';
 
 const { DIR, PORT = '8080' } = process.env;
-if (!DIR) {
-  throw new Error('DIR environment variable is required');
-}
 
-export default defineConfig({
-  root: resolve('examples', DIR),
-  server: { port: Number(PORT) },
-  resolve: { alias: { 'use-signals': resolve('src') } },
-  plugins: [indexHtml()],
+export default defineConfig(({ mode }) => {
+  if (mode === 'test') {
+    return {
+      resolve: { alias: { 'use-signals': resolve('src') } },
+    };
+  }
+  if (!DIR) {
+    throw new Error('DIR environment variable is required');
+  }
+  return {
+    root: resolve('examples', DIR),
+    server: { port: Number(PORT) },
+    resolve: { alias: { 'use-signals': resolve('src') } },
+    plugins: [indexHtml(resolve('examples', DIR, 'public', 'index.html'))],
+  };
 });
 
-function indexHtml(): Plugin {
-  const html = readFileSync(
-    resolve('examples', DIR!, 'public', 'index.html'),
-    'utf8',
-  );
+function indexHtml(file: string): Plugin {
+  const html = readFileSync(file, 'utf8');
   return {
-    name: 'index-plugin',
+    name: 'index-html-plugin',
     configureServer(server) {
       return () => {
         server.middlewares.use((req, res) => {
