@@ -12,7 +12,7 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "use-signals": ["./src"]
+      "use-signals": ["./src/index.js"]
     }
   },
   "exclude": ["dist", "examples"]
