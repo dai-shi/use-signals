@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "esnext",
+    "target": "es2018",
     "downlevelIteration": true,
     "esModuleInterop": true,
-    "module": "es2015",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "allowJs": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "verbatimModuleSyntax": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "jsx": "react-jsx",
@@ -16,6 +15,7 @@
     "paths": {
       "use-signals": ["./src"]
     },
+    "declaration": true,
     "outDir": "./dist"
   },
   "include": ["src"]

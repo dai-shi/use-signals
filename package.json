@@ -11,13 +11,29 @@
   "source": "./src/index.ts",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      },
+      "default": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
   "sideEffects": false,
   "files": [
     "src",
     "dist"
   ],
   "scripts": {
-    "compile": "tsc --project . --declaration",
+    "compile": "rm -rf dist && run-s compile:*",
+    "compile:esm": "tsc --project .",
+    "compile:cjs": "tsc --project tsconfig.cjs.json",
+    "postcompile:cjs": "echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
     "test": "run-s eslint tsc-test",
     "eslint": "eslint --ext .js,.ts,.tsx .",
     "tsc-test": "tsc --project . --noEmit",
