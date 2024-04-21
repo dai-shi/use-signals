@@ -5,6 +5,7 @@
     "downlevelIteration": true,
     "esModuleInterop": true,
     "module": "nodenext",
+    "skipLibCheck": true,
     "allowJs": true,
     "verbatimModuleSyntax": true,
     "noUncheckedIndexedAccess": true,

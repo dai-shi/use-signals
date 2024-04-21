@@ -11,7 +11,10 @@ export default defineConfig(({ mode }) => {
   if (mode === 'test') {
     return {
       resolve: { alias: { 'use-signals': resolve('src') } },
-      test: { environment: 'jsdom' },
+      test: {
+        environment: 'jsdom',
+        setupFiles: ['./tests/vitest-setup.js'],
+      },
     };
   }
   if (!DIR) {
