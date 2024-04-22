@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
     return {
       resolve: { alias: { 'use-signals': resolve('src') } },
       test: {
-        environment: 'jsdom',
+        environment: 'happy-dom',
         setupFiles: ['./tests/vitest-setup.js'],
       },
     };
