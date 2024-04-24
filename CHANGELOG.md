@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.1.0] - 2024-04-25
+
+### Added
+
+- Experimental JSX transform
+
 ## [0.0.3] - 2024-04-12
 
 ### Changed

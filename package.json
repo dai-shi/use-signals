@@ -1,7 +1,7 @@
 {
   "name": "use-signals",
   "description": "An experimental React hook for TC39 signals",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "type": "module",
   "author": "Daishi Kato",
   "repository": {
@@ -22,6 +22,26 @@
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       }
+    },
+    "./jsx-runtime": {
+      "require": {
+        "types": "./dist/cjs/jsx-runtime.d.ts",
+        "default": "./dist/cjs/jsx-runtime.js"
+      },
+      "default": {
+        "types": "./dist/jsx-runtime.d.ts",
+        "default": "./dist/jsx-runtime.js"
+      }
+    },
+    "./jsx-dev-runtime": {
+      "require": {
+        "types": "./dist/cjs/jsx-dev-runtime.d.ts",
+        "default": "./dist/cjs/jsx-dev-runtime.js"
+      },
+      "default": {
+        "types": "./dist/jsx-dev-runtime.d.ts",
+        "default": "./dist/jsx-dev-runtime.js"
+      }
     }
   },
   "sideEffects": false,
@@ -40,7 +60,8 @@
     "test:types": "tsc -p . --noEmit",
     "test:types:examples": "tsc -p examples --noEmit",
     "test:spec": "vitest run",
-    "examples:01_counter": "DIR=01_counter vite"
+    "examples:01_counter": "DIR=01_counter vite",
+    "examples:02_jsx": "DIR=02_jsx vite"
   },
   "keywords": [
     "react",
@@ -52,6 +73,7 @@
     "singleQuote": true
   },
   "dependencies": {
+    "create-react-signals": "^0.7.0",
     "signal-polyfill": "^0.1.0"
   },
   "devDependencies": {
