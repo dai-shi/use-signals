@@ -47,6 +47,7 @@ and open <http://localhost:8080> in your web browser.
 
 You can also try them in codesandbox.io:
 [01](https://codesandbox.io/s/github/dai-shi/use-signals/tree/main/examples/01_counter)
+[02](https://codesandbox.io/s/github/dai-shi/use-signals/tree/main/examples/02_jsx)
 
 ## Tweets
 
