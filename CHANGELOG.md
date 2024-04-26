@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2024-04-26
+
+- Update create-react-signals v0.8.0
+
 ## [0.1.0] - 2024-04-25
 
 ### Added
