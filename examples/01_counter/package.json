@@ -2,7 +2,7 @@
   "name": "example",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@types/react": "latest",
     "@types/react-dom": "latest",
