@@ -61,7 +61,8 @@
     "test:types:examples": "tsc -p examples --noEmit",
     "test:spec": "vitest run",
     "examples:01_counter": "DIR=01_counter vite",
-    "examples:02_jsx": "DIR=02_jsx vite"
+    "examples:02_jsx": "DIR=02_jsx vite",
+    "examples:03_counter": "DIR=03_counter_vite vite"
   },
   "keywords": [
     "react",
