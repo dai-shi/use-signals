@@ -45,7 +45,7 @@ PORT=8080 yarn run examples:01_counter
 
 and open <http://localhost:8080> in your web browser.
 
-You can also try them in codesandbox.io:
+You can also try them directly in browser:
 [01](https://stackblitz.com/github/dai-shi/use-signals/tree/main/examples/01_counter)
 [02](https://stackblitz.com/github/dai-shi/use-signals/tree/main/examples/02_jsx)
 
