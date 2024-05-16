@@ -2,7 +2,6 @@
 
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
 const { DIR, PORT = '8080' } = process.env;
 
@@ -23,6 +22,5 @@ export default defineConfig(({ mode }) => {
     root: resolve('examples', DIR),
     server: { port: Number(PORT) },
     resolve: { alias: { 'use-signals': resolve('src') } },
-    plugins: [react()],
   };
 });
