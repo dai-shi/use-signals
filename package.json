@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "create-react-signals": "^0.8.0",
-    "signal-polyfill": "^0.1.0"
+    "signal-polyfill": "^0.2.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.5",
