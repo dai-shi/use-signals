@@ -12,8 +12,8 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "use-signals": ["./src/index.js"],
-      "use-signals/jsx-runtime": ["./src/jsx-runtime.js"]
+      "use-signals": ["./src/index.ts"],
+      "use-signals/jsx-runtime": ["./src/jsx-runtime.ts"]
     }
   },
   "exclude": ["dist", "examples"]
