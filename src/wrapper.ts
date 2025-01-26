@@ -38,7 +38,6 @@ const createSignalWrapper = <T>(
 const { getSignal: getSignalWrapper, inject } =
   createReactSignals(createSignalWrapper);
 
-// eslint-disable-next-line import/no-named-as-default-member
 export const createElement = inject(ReactExports.createElement);
 
 export function $<T>(signal: AnySignal<T>): T {
